@@ -27,6 +27,8 @@ services:
     image: mysql:8
     ports:
     - "32000:3306"
+    security_opt:
+    - seccomp:unconfined
     environment:
       MYSQL_ROOT_PASSWORD: pfm_dc_2020
       MYSQL_DATABASE: user

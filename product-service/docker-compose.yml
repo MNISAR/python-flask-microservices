@@ -25,6 +25,8 @@ services:
   product-db:
     container_name: cproduct_dbase
     image: mysql:8
+    security_opt:
+    - seccomp:unconfined
     ports:
     - "32001:3306"
     environment:

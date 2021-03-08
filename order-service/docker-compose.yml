@@ -24,6 +24,8 @@ services:
   order-db:
     container_name: corder_dbase
     image: mysql:8
+    security_opt:
+    - seccomp:unconfined
     ports:
     - "32002:3306"
     environment:

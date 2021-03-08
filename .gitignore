@@ -4,3 +4,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 migrations/
+.microservices/
+activate/
+bin/
+lib64
+microservices/
+pyvenv.cfg
+

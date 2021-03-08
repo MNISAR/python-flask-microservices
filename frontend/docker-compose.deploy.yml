@@ -27,6 +27,8 @@ services:
   user-db:
     container_name: cuser_dbase
     image: mysql:8
+    security_opt:
+    - seccomp:unconfined
     ports:
     - "32000:3306"
     environment:
@@ -56,6 +58,8 @@ services:
     image: mysql:8
     ports:
     - "32001:3306"
+    security_opt:
+    - seccomp:unconfined
     environment:
       MYSQL_ROOT_PASSWORD: pfm_dc_2020
       MYSQL_DATABASE: product
@@ -81,6 +85,8 @@ services:
   order-db:
     container_name: corder_dbase
     image: mysql:8
+    security_opt:
+    - seccomp:unconfined
     ports:
     - "32002:3306"
     environment:
